@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detector</title>
+    <link rel="stylesheet" href="static/js/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">   
+    
+</head>
+<body>
+    <header>
+
+        <div id="google_translate_element"></div>
+        <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <div class="banner">
+            <h1>Plant Disease Detector</h1>
+            <p class="tagline">Identify and prevent plant diseases for a healthier garden</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#planthealth">Plant Health</a></li>
+                <li><a href="#commondiseases">Common Diseases</a></li>
+                <li><a href="#detectyours">Detect Yours</a></li>
+                <li><a href="#plantcare">Plant Care</a></li>
+                <li><a href="#chatbot">Chatbot</a></li>
+                <li><a href="#chatbot">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Plant Health Section -->
+     
+    <section id="planthealth" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 1cm;">
+        <img src="static\images\left1.jpg" alt="Plant Image Left" style="width: 20%; height: auto; border-radius: 15px;">
+        
+        <div style="max-width: 50%; text-align: center;">
+            <h2 style="font-family: 'Courier New', Courier, monospace; font-size: 2.5rem; color: #2E8B57; text-shadow: 2px 2px #FFD700;">
+                Thrive & Bloom: The Secret to Vibrant Plant Health
+            </h2>
+            <p style="font-family: 'Arial', sans-serif; font-size: 1.1rem; line-height: 1.6;">
+                Healthy plants are the cornerstone of a flourishing ecosystem. Organically grown plants not only taste better but also provide a nutrient-dense diet that promotes robust health for all living beings. By choosing to nurture your garden with natural methods, you contribute to a global movement toward sustainability, better air quality, and a healthier planet. Remember, every healthy plant is a step toward a healthier you and a healthier world.
+            </p>
+        </div>
+        
+        <img src="static\images\right2.jpg" alt="Plant Image Right" style="width: 20%; height: auto; border-radius: 15px;">
+    </section>
+
+    <!-- Common Diseases Section -->
+    <section id="commondiseases" class="content">
+        <h1>Common Plant Diseases</h1>
+
+        <div class="disease-box">
+            <a href="anthracnose.html">
+                <img src="{{ url_for('static', filename='images/anthracnose.jpeg') }}" alt="Anthracnose">
+                <div class="disease-info">
+                    <h2>Late Blight</h2>
+                    <p>PLANTS AFFECTED: Primarily tomatoes and potatoes.
+                        DESCRIPTION: Caused by the fungus Phytophthora infestans, it leads to dark, water-soaked lesions on leaves, stems, and tubers.
+                        </p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="downy_mildew.html">
+                <img src="{{ url_for('static', filename='images/downy.jpeg') }}" alt="Downy Mildew">
+                <div class="disease-info">
+                    <h2>Target Spot</h2>
+                    <p>PLANTS AFFECTED: Tomatoes.
+                        DESCRIPTION: Caused by the fungus Corynespora cassiicola, characterized by circular lesions with a dark center and concentric rings.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="powdery_mildew.html">
+                <img src="{{ url_for('static', filename='images/Powdery-Mildew.jpg') }}" alt="Powdery Mildew">
+                <div class="disease-info">
+                    <h2>Powdery Mildew</h2>
+                    <p>PLANTS AFFECTED: A wide range of plants, including cucumbers, melons, grapes, and some ornamentals.
+                        DESCRIPTION: Characterized by white or gray powdery spots on leaves and stems, caused by various fungi such as Podosphaera xanthii.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="rust.html">
+                <img src="{{ url_for('static', filename='images/rust.jpeg') }}" alt="Rust">
+                <div class="disease-info">
+                    <h2>Common Rust</h2>
+                    <p>PLANTS AFFECTED: Corn (maize).
+                        DESCRIPTION: Caused by the fungus Puccinia sorghi, it produces reddish-brown pustules on leaves and stems.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="leaf_spot.html">
+                <img src="{{ url_for('static', filename='images/leafspot.jpeg') }}" alt="Leaf Spot">
+                <div class="disease-info">
+                    <h2>Tomato Yellow Leaf Curl Virus (TYLCV)</h2>
+                    <p>PLANTS AFFECTED: Tomatoes.
+                        DESCRIPTION: A viral disease transmitted by whiteflies, leading to yellowing and curling of leaves, stunted growth, and reduced fruit yield.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="late_blight.html">
+                <img src="{{ url_for('static', filename='images/late_blight.jpeg') }}" alt="Late Blight">
+                <div class="disease-info">
+                    <h2>Early Blight</h2>
+                    <p>PLANTS AFFECTED: Tomatoes and potatoes.
+                        DESCRIPTION: Caused by the fungus Alternaria solani, it results in dark, concentric ring lesions on older leaves.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="bacterial_spot.html">
+                <img src="{{ url_for('static', filename='images/bacterialspot.jpeg') }}" alt="Bacterial Spot">
+                <div class="disease-info">
+                    <h2>Bacterial Spot</h2>
+                    <p>PLANTS AFFECTED: Tomatoes and peppers.
+                        DESCRIPTION: Caused by bacteria like Xanthomonas campestris, leading to small, water-soaked lesions that eventually turn dark and sunken.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="black_spot.html">
+                <img src="{{ url_for('static', filename='images/blackspot.jpeg') }}" alt="Black Spot">
+                <div class="disease-info">
+                    <h2>Tomato Mosaic Virus (ToMV)</h2>
+                    <p>PLANTS AFFECTED: Tomatoes.
+                        DESCRIPTION: A viral disease causing mottling and discoloration of leaves, stunted growth, and reduced fruit production.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="botrytis.html">
+                <img src="{{ url_for('static', filename='images/botrytis.jpeg') }}" alt="Botrytis">
+                <div class="disease-info">
+                    <h2>Cercospora Leaf Spot (Gray Leaf Spot)</h2>
+                    <p>PLANTS AFFECTED: Corn (maize).
+                        DESCRIPTION: Caused by the fungus Cercospora zeae-maydis, leading to grayish spots with dark borders on leaves.
+                        </p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="disease-box">
+            <a href="verticillium_wilt.html">
+                <img src="{{ url_for('static', filename='images/Verticillium-fungi-GettyImages-1042492416-1.jpg') }}" alt="Verticillium Wilt">
+                <div class="disease-info">
+                    <h2>Leaf Scorch</h2>
+                    <p>PLANTS AFFECTED: Various plants, including raspberries and tomatoes.
+                        DESCRIPTION: Characterized by browning or scorching of leaf edges, often due to environmental stress or pathogens.</p>
+                </div>
+            </a>
+        </div>
+        
+    </section>
+
+    <!--Whta we can predict-->
+
+
+    <section id="predictions" class="content">
+        <h1 class="text-center">What We Can Predict</h1>
+    
+        <!-- Main Accordion -->
+        <div class="accordion" id="predictionAccordion">
+    
+            <!-- Fruits -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFruits">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFruits" aria-expanded="true" aria-controls="collapseFruits">
+                        Fruits
+                    </button>
+                </h2>
+                <div id="collapseFruits" class="accordion-collapse collapse show" aria-labelledby="headingFruits" data-bs-parent="#predictionAccordion">
+                    <div class="accordion-body">
+    
+                        <!-- Sub-Accordion for Apple -->
+                        <div class="accordion" id="fruitsSubAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingApple">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseApple" aria-expanded="true" aria-controls="collapseApple">
+                                        Apple
+                                    </button>
+                                </h2>
+                                <div id="collapseApple" class="accordion-collapse collapse" aria-labelledby="headingApple" data-bs-parent="#fruitsSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Apple scab</li>
+                                            <li>Black rot</li>
+                                            <li>Cedar apple rust</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Cherry -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCherry">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCherry" aria-expanded="false" aria-controls="collapseCherry">
+                                        Cherry (including sour)
+                                    </button>
+                                </h2>
+                                <div id="collapseCherry" class="accordion-collapse collapse" aria-labelledby="headingCherry" data-bs-parent="#fruitsSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Powdery mildew</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Peach -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPeach">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePeach" aria-expanded="false" aria-controls="collapsePeach">
+                                        Peach
+                                    </button>
+                                </h2>
+                                <div id="collapsePeach" class="accordion-collapse collapse" aria-labelledby="headingPeach" data-bs-parent="#fruitsSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Bacterial spot</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Orange -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOrange">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOrange" aria-expanded="false" aria-controls="collapseOrange">
+                                        Orange
+                                    </button>
+                                </h2>
+                                <div id="collapseOrange" class="accordion-collapse collapse" aria-labelledby="headingOrange" data-bs-parent="#fruitsSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Huanglongbing (Citrus greening)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Berries -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBerries">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBerries" aria-expanded="false" aria-controls="collapseBerries">
+                        Berries
+                    </button>
+                </h2>
+                <div id="collapseBerries" class="accordion-collapse collapse" aria-labelledby="headingBerries" data-bs-parent="#predictionAccordion">
+                    <div class="accordion-body">
+    
+                        <!-- Sub-Accordion for Grape -->
+                        <div class="accordion" id="berriesSubAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingGrape">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrape" aria-expanded="true" aria-controls="collapseGrape">
+                                        Grape
+                                    </button>
+                                </h2>
+                                <div id="collapseGrape" class="accordion-collapse collapse" aria-labelledby="headingGrape" data-bs-parent="#berriesSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Black rot</li>
+                                            <li>Esca (Black Measles)</li>
+                                            <li>Leaf blight (Isariopsis Leaf Spot)</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Raspberry -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingRaspberry">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRaspberry" aria-expanded="false" aria-controls="collapseRaspberry">
+                                        Raspberry
+                                    </button>
+                                </h2>
+                                <div id="collapseRaspberry" class="accordion-collapse collapse" aria-labelledby="headingRaspberry" data-bs-parent="#berriesSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Strawberry -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingStrawberry">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStrawberry" aria-expanded="false" aria-controls="collapseStrawberry">
+                                        Strawberry
+                                    </button>
+                                </h2>
+                                <div id="collapseStrawberry" class="accordion-collapse collapse" aria-labelledby="headingStrawberry" data-bs-parent="#berriesSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Leaf scorch</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Blueberry -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBlueberry">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlueberry" aria-expanded="false" aria-controls="collapseBlueberry">
+                                        Blueberry
+                                    </button>
+                                </h2>
+                                <div id="collapseBlueberry" class="accordion-collapse collapse" aria-labelledby="headingBlueberry" data-bs-parent="#berriesSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Vegetables -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingVegetables">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVegetables" aria-expanded="false" aria-controls="collapseVegetables">
+                        Vegetables
+                    </button>
+                </h2>
+                <div id="collapseVegetables" class="accordion-collapse collapse" aria-labelledby="headingVegetables" data-bs-parent="#predictionAccordion">
+                    <div class="accordion-body">
+    
+                        <!-- Sub-Accordion for Potato -->
+                        <div class="accordion" id="vegetablesSubAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPotato">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePotato" aria-expanded="true" aria-controls="collapsePotato">
+                                        Potato
+                                    </button>
+                                </h2>
+                                <div id="collapsePotato" class="accordion-collapse collapse" aria-labelledby="headingPotato" data-bs-parent="#vegetablesSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Early blight</li>
+                                            <li>Late blight</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Sub-Accordion for Tomato -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTomato">
+                                    <button class="accordion-button accordion-button-sub" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTomato" aria-expanded="false" aria-controls="collapseTomato">
+                                        Tomato
+                                    </button>
+                                </h2>
+                                <div id="collapseTomato" class="accordion-collapse collapse" aria-labelledby="headingTomato" data-bs-parent="#vegetablesSubAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Bacterial spot</li>
+                                            <li>Early blight</li>
+                                            <li>Late blight</li>
+                                            <li>Leaf Mold</li>
+                                            <li>Septoria leaf spot</li>
+                                            <li>Spider mites Two-spotted spider mite</li>
+                                            <li>Target Spot</li>
+                                            <li>Yellow Leaf Curl Virus</li>
+                                            <li>Mosaic virus</li>
+                                            <li>Healthy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+
+
+    <!-- Detect Yours Section -->
+
+    <section id="detectyours" class="content">
+        <h1>Detect Yours</h1>
+        <div class="upload-section">
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="upload-button" name="image" accept="image/*" required>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    
+        <!-- Output Section -->
+        <div id="output-section">
+            <div class="output-box">
+                <h2>Disease Detected</h2>
+                <p id="detected-disease">Please upload an image to detect the disease.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(this);
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('detected-disease').textContent = `Error: ${data.error}`;
+                } else {
+                    document.getElementById('detected-disease').textContent = `Predicted Disease: ${data.prediction}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('detected-disease').textContent = `Error: ${error.message}`;
+            });
+        });
+    </script>
+
+    <!-- Plant Care Section -->
+
+    <section id="plantcare" class="content">
+        <h1>Plant Care</h1>
+        <!-- Add content for Plant Care section here -->
+    </section>
+    
+    <section id="english-articles" class="content">
+        <h1 class="text-center">English Articles</h1>
+        <div class="articles-container">
+            <div class="articles-wrapper">
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/collecting-and-saving-seeds/" class="article-link">
+                        <img src="static/images/E1.jpg" alt="Collecting and Saving Seeds" class="article-thumbnail">
+                        <p class="article-title">Collecting and Saving Seeds</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/three-key-benefits-of-gardening-in-raised-beds/" class="article-link">
+                        <img src="static/images/E2.jpg" alt="Three Key Benefits of Gardening in Raised Beds" class="article-thumbnail">
+                        <p class="article-title">Three Key Benefits of Gardening in Raised Beds</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/ultimate-tomato-cage/" class="article-link">
+                        <img src="static/images/E3.jpg" alt="The Ultimate Tomato Cage in 5 Simple Steps" class="article-thumbnail">
+                        <p class="article-title">The Ultimate Tomato Cage in 5 Simple Steps</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/simple-ways-to-reduce-garden-disease/" class="article-link">
+                        <img src="static/images/E4.jpg" alt="Simple Ways to Reduce Garden Disease" class="article-thumbnail">
+                        <p class="article-title">Simple Ways to Reduce Garden Disease</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/controlling-or-eliminating-powdery-mildew/" class="article-link">
+                        <img src="static/images/E5.jpg" alt="Controlling or Eliminating Powdery Mildew" class="article-thumbnail">
+                        <p class="article-title">Controlling or Eliminating Powdery Mildew</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/bacteria-fungus-and-viruses-an-overview/" class="article-link">
+                        <img src="static/images/E6.jpEg" alt="Bacteria, Fungus, and Viruses, an Overview" class="article-thumbnail">
+                        <p class="article-title">Bacteria, Fungus, and Viruses, an Overview</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/organic-pest-controls/" class="article-link">
+                        <img src="static/images/E7.jpg" alt="Organic Pest Controls" class="article-thumbnail">
+                        <p class="article-title">Organic Pest Controls</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.growingagreenerworld.com/soil-prep-for-the-vegetable-garden/" class="article-link">
+                        <img src="static\images\E8.jpeg" alt="Soil Prep for the Vegetable Garden" class="article-thumbnail">
+                        <p class="article-title">Soil Prep for the Vegetable Garden</p>
+                    </a>
+                </div>
+            </div>
+            <button class="scroll-button">></button>
+        </div>
+    </section>
+
+
+    <section id="hindi-articles" class="content">
+        <h1 class="text-center">Hindi Articles</h1>
+        <div class="articles-container">
+            <div class="articles-wrapper">
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/how-to-make-moss-stick-for-vine-plants-at-home-article-301060" class="article-link">
+                        <img src="static/images/H1.jpg" alt="How to Keep your Plants Healthy and Disease-Free?" class="article-thumbnail">
+                        <p class="article-title">How to Make Moss Stick for Vine Plants at Home</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/how-to-get-more-cucumbers-from-plants-article-300850" class="article-link">
+                        <img src="static/images/H2.jpg" alt="How to Get More Cucumbers From Plants" class="article-thumbnail">
+                        <p class="article-title">How to Get More Cucumbers From Plants</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/winter-green-veg-and-flower-seeds-to-sowing-in-september-article-300051" class="article-link">
+                        <img src="static/images/H3.jpg" alt="Winter Green Veg and Flower Seeds to Sow in September" class="article-thumbnail">
+                        <p class="article-title">Winter Green Veg and Flower Seeds to Sow in September</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/how-do-leaves-tell-you-about-a-plant-health-article-297749" class="article-link">
+                        <img src="static/images/H4.jpg" alt="How do Leaves Tell You About a Plant Health" class="article-thumbnail">
+                        <p class="article-title">How do Leaves Tell You About a Plant Health</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/how-to-take-care-of-bengal-currant-plant-karonda-article-298474" class="article-link">
+                        <img src="static/images/H5.jpg" alt="How to Take Care of Bengal Currant Plant Karonda" class="article-thumbnail">
+                        <p class="article-title">How to Take Care of Bengal Currant Plant Karonda</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/what-happens-if-you-put-grind-banana-peel-on-plants-article-298166" class="article-link">
+                        <img src="static/images/H6.jpg" alt="What Happens If You Put Grind Banana Pell on Plants" class="article-thumbnail">
+                        <p class="article-title">What Happens If You Put Grind Banana Pell on Plants</p>
+                    </a>
+                </div>
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/how-to-get-rid-of-dirt-caused-by-hanging-planters-article-299198" class="article-link">
+                        <img src="static/images/H7.jpg" alt="How To Get Rid of Dirt Caused by Hanging Planters" class="article-thumbnail">
+                        <p class="article-title">How To Get Rid of Dirt Caused by Hanging Planters</p>
+                    </a>
+                </div>
+
+                <div class="article-card">
+                    <a href="https://www.herzindagi.com/hindi/society-culture/how-do-i-get-the-maximum-flowers-in-my-hibiscus-article-300604" class="article-link">
+                        <img src="static/images/H8.jpg" alt="How To Get Rid of Dirt Caused by Hanging Planters" class="article-thumbnail">
+                        <p class="article-title">How Do I Get Maximum Flowers in my Hibiscus</p>
+                    </a>
+                </div>
+                <!-- Add more articles as needed -->
+            </div>
+            <button class="scroll-button">></button>
+        </div>
+    </section>
+    
+    
+
+
+    <!-- Chatbot Section -->
+    <section id="chatbot" class="content">
+        <h1>Chatbot</h1>
+        <!-- Add content for Chatbot section here -->
+    </section>
+
+
+
+
+</body>
+</html>
