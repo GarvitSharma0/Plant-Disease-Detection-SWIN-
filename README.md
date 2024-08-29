@@ -1,1 +1,1 @@
-# Plant-Disease-Detection-SWIN-
+# Plant-Disease-Detection-SWIN
