@@ -11,7 +11,6 @@ This project implements a deep learning model for classifying plant diseases fro
 - [Evaluation](#evaluation)
 - [Results](#results)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -52,8 +51,8 @@ The model achieved the following results on the test set:
   - Apple__Apple_scab: 99%
   - Apple__Black_rot: 100%
   - (Include all other classes with their corresponding accuracies)
-
-![Test Accuracy per Class](path/to/accuracy_graph.png)
+![Learning Curve](/home/garv/Pictures/epochs.png)
+![Test Accuracy per Class](/home/garv/Pictures/test.png)
 
 ## Installation
 
@@ -76,24 +75,6 @@ To run this project locally, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
-
-## Usage
-
-1. **Training the Model:**
-    ```bash
-    python train.py
-    ```
-
-2. **Evaluating the Model:**
-    ```bash
-    python evaluate.py
-    ```
-
-3. **Running the Flask Application:**
-    ```bash
-    python app.py
-    ```
-   The application will be available at `http://localhost:5000/`.
 
 ## Contributing
 
