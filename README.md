@@ -51,8 +51,8 @@ The model achieved the following results on the test set:
   - Apple__Apple_scab: 99%
   - Apple__Black_rot: 100%
   - (Include all other classes with their corresponding accuracies)
-![Learning Curve](/home/garv/Pictures/epochs.png)
-![Test Accuracy per Class](/home/garv/Pictures/test.png)
+![Learning Curve](static/images/epochs.png)
+![Test Accuracy per Class](static/images/test.png)
 
 ## Installation
 
