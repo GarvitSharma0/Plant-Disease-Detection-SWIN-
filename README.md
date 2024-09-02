@@ -44,13 +44,7 @@ The model is evaluated on a separate test set. The evaluation metrics include:
 - **Test Accuracy** (per class and overall)
 
 ## Results
-
-The model achieved the following results on the test set:
-- **Overall Test Accuracy:** 98%
-- **Per Class Accuracy:**
-  - Apple__Apple_scab: 99%
-  - Apple__Black_rot: 100%
-  - (Include all other classes with their corresponding accuracies)
+Test Accuracy of 98% (9744/9856)
 ![Learning Curve](static/images/epochs.png)
 ![Test Accuracy per Class](static/images/test.png)
 
