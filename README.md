@@ -33,6 +33,7 @@ The model is evaluated on a separate test set. The evaluation metrics include:
 - **Test Accuracy** (per class and overall)
 
 ## Results
+Best Val Acc: 98.94%
 Test Accuracy of 98% (9744/9856)
 ![Learning Curve](static/images/epochs.png)
 ![Test Accuracy per Class](static/images/test.png)
