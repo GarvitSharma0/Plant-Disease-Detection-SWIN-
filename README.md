@@ -2,17 +2,6 @@
 
 This project implements a deep learning model for classifying plant diseases from leaf images. The model is built using the Swin Transformer architecture and is trained on a dataset containing images of various plant diseases. The goal is to accurately classify the type of disease present in the input image.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Results](#results)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
