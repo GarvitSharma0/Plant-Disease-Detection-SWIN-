@@ -21,7 +21,7 @@ The model is trained using PyTorch with the following configuration:
 - **Optimizer:** Adam
 - **Learning Rate:** 0.001
 - **Loss Function:** Cross-Entropy Loss
-- **Number of Epochs:** 20 (can be adjusted based on the dataset size)
+- **Number of Epochs:** 20 
 - **Batch Size:** 32
 
 Data augmentation techniques such as random rotations, flips, and scaling are applied to improve the model's generalization.
